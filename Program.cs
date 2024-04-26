@@ -20,8 +20,10 @@ internal class Program {
 											   new ChatRequestUserMessage("What's the best way to train a parrot?"),
 										   } };
 		await foreach (StreamingChatCompletionsUpdate chatUpdate in client.GetChatCompletionsStreaming(chatCompletionsOptions)) {
-			if (chatUpdate.Role.HasValue) 				Console.Write($"{chatUpdate.Role.Value.ToString().ToUpperInvariant()}: ");
-			if (!string.IsNullOrEmpty(chatUpdate.ContentUpdate)) 				Console.Write(chatUpdate.ContentUpdate);
+			if (chatUpdate.Role.HasValue)
+				Console.Write($"{chatUpdate.Role.Value.ToString().ToUpperInvariant()}: ");
+			if (!string.IsNullOrEmpty(chatUpdate.ContentUpdate))
+				Console.Write(chatUpdate.ContentUpdate);
 		}
 	}
 }
