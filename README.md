@@ -18,3 +18,5 @@ System.Text.Encodings.Web.4.7.2
 System.Text.Json.4.7.2
 System.Threading.Tasks.Extensions.4.5.4
 ```
+
+https://www.nuget.org/packages/Azure.AI.OpenAI/#readme-body-tab

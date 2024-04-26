@@ -1,7 +1,12 @@
+using Azure.AI.OpenAI;
+
 namespace TestAzureAIOpenAI {
 internal class Program {
 	static void Main(string[] args) {
-		Console.WriteLine("Hello, World!");
+		var apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
+		if (apiKey == null)
+			throw new Exception("OPENAI_API_KEY not set");
+		var client = new OpenAIClient(apiKey);
 	}
 }
 }
